@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Order>
+
+<h2 style="color:white; background-color:  #552f0a;border-radius:15px; padding-left:20px;" >Orders</h2>
+
+<table class="table" style="background-color: rgb(186, 124, 93); border-radius:15px; ">
+    <thead>
+        <tr>
+            <th>Order Page</th>
+            <th>Order Name</th>
+            <th>Order Count</th>
+            <th>Order Price</th>
+            <th>Add / Delete</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @{
+            double a = 0;
+        }
+        @foreach (var group in Model.GroupBy(o => o.OrderName))
+        {
+            <tr>
+                <td><img src="@group.First().OrderUrl" style="width:50px; height:50px;" /></td>
+                <td>@group.First().OrderName</td>
+                <td>@group.Sum(o => o.OrderCount)</td>
+                <td>@group.Sum(o => o.OrderPrice)</td>
+                @{
+                    a = 0;
+                    a += Model.Sum(o => o.OrderPrice);
+                }
+                <td>
+                    <a style="background-color:white" asp-controller="Order" asp-action="Add" asp-route-name="@group.First().OrderName" class="btn"><i style=" display:center; color:black; justify-content:center; align-items:center;" class="fa-solid fa-plus"></i></a>
+                    <a style="background-color:white" asp-controller="Order" asp-action="Delete" asp-route-name="@group.First().OrderName" class="btn"><i style="color:black" class="fa-solid fa-minus"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<table class="table" style="background-color: rgb(186, 124, 93); border-radius:15px; ">
+    <thead>
+        <td> Total Price -> @a</td>
+
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+ 
+<a  style="background-color: rgb(186, 124, 93);" asp-action="Detail" asp-controller="Order" class="btn btn-primary">Order</a>

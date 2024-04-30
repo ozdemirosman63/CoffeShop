@@ -1,0 +1,146 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Coffee Shop</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden; /* This ensures that the image won't overflow the container */
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* This places the image behind other content */
+        }
+
+        .container.navbar {
+            width: 100%;
+            height: 120px;
+        }
+
+        .coffee-logo {
+            width: 80px;
+            height: 50px;
+            margin-top: 30px;
+            margin-left: 100px;
+            float: left;
+        }
+
+        .navbar ul {
+            display: inline-block;
+            margin-top: 40px;
+            margin-left: 300px;
+        }
+
+            .navbar ul li {
+                list-style: none;
+                display: inline-block;
+                /* float:left; */
+                margin-right: 20px;
+            }
+
+                .navbar ul li a {
+                    color: white;
+                    font-size: 13px;
+                    font-family: Roboto;
+                    text-decoration: none;
+                    font-weight: bolder;
+                }
+
+                    .navbar ul li a:hover {
+                        text-decoration: underline;
+                        color: black;
+                        cursor: pointer;
+                    }
+
+        .icon {
+            float: right;
+            margin-top: 40px;
+            margin-right: 100px;
+        }
+
+        i {
+            color: white;
+            font-size: 20px;
+            margin-right: 13px;
+        }
+
+        hr {
+            margin-top: 30px;
+            border: 1px solid grey;
+        }
+
+        .coffee-info {
+            float: right;
+            margin-top: 100px;
+            margin-right: 120px;
+        }
+
+        h1 {
+            color: white;
+            font-family: Roboto;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .info {
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            font-family: sans-serif;
+        }
+
+        a {
+            color: white;
+            background-color: rgb(186, 124, 93);
+            padding: 9px 26px;
+            font-family: Roboto;
+            border: none;
+            border-radius: 2px;
+            transition: box shadow 0.15s;
+        }
+
+            a:hover {
+                color: black;
+                text-decoration: underline;
+                box-shadow: 10px 10px 10px black;
+            }
+
+    </style>
+</head>
+<body>
+
+        <div class="coffee-info">
+            <h1> FRESH COFFEE IN <br> THE MORNİNG</h1>
+            <div class="info">
+                <p>Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit Sit,</p>
+                <p>Consequuntur? Et Veritatis Velit Nesciunt Odio!</p>
+            </div>
+            <div>
+                <a asp-action="Index" asp-controller="CoffeeMenu">Take an Order</a>
+            </div>
+        </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,139 @@
+﻿@model Login
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Giriş Yap</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body {
+    background: #3aaf9f;
+}
+
+.wrapper{
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 60px 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+.wrapper .title{
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+    color: rgb(186, 124, 93);
+}
+.wrapper .social_media {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.wrapper .social_media .item{
+    width: 35px;
+    height: 35px;
+    border: 2px solid #eeeeee;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #eeeeee;
+    transition: all 0.5s ease;
+}
+
+.wrapper .form .input_field{
+    position: relative;
+    margin-bottom: 10px;
+}
+.wrapper .form .input_field .input{
+    width: 100%;
+    padding: 12px;
+    padding-left: 30px;
+    border: none;
+    background: #eeeeee;
+}
+.wrapper .form .btn{
+    width: 70%;
+    margin: 10px auto 0;
+    background-color: rgb(186, 124, 93);
+    padding: 6px;
+    text-align: center;
+    border-radius: 10px;
+}
+.wrapper .form .btn a{
+  background-color: rgb(186, 124, 93);
+}
+.wrapper .form .input_field i{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #1d2120;
+    font-size: 14px;
+}
+
+        button {
+            background: #552f0a;
+            color: #ebd1b6;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 13px 30px;
+            border-radius: 30px;
+        }
+
+            button:hover {
+                border: 7px solid #552f0a;
+                cursor: pointer;
+            }
+
+
+::-webkit-input-placeholder{
+    color: #848484;
+}</style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="title">
+            Sign In
+        </div>
+        <div class="form">
+        <form asp-controller="Login" asp-action="Index" method="post">
+                <div style="color:rgb(186, 124, 93);" asp-validation-summary="All"></div>
+            <div class="input_field">
+                    <input asp-for="Email" placeholder="Email" class="input">
+                    <i class="far fa-envelope"></i>
+            </div>
+            <div class="input_field">
+                    <input type="password" asp-for="Password" placeholder="Password" class="input">
+                    <i class="fa-solid fa-lock"></i>
+            </div>
+                <div style="display:flex; justify-content:center; align-items:center;" >
+                <button type="submit" >Sign In</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    
+
+</body>
+</html>
+
+
+
+
+
+

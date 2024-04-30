@@ -1,0 +1,117 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow: hidden; /* This ensures that the image won't overflow the container */
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* This places the image behind other content */
+}
+
+.container.navbar {
+    width: 100%;
+    height: 120px;
+}
+
+.coffee-logo {
+    width: 80px;
+    height: 50px;
+    margin-top: 30px;
+    margin-left: 100px;
+    float: left;
+}
+
+.navbar ul {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 300px;
+}
+
+    .navbar ul li {
+        list-style: none;
+        display: inline-block;
+        /* float:left; */
+        margin-right: 20px;
+    }
+
+        .navbar ul li a {
+            color: white;
+            font-size: 13px;
+            font-family: Roboto;
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+            .navbar ul li a:hover {
+                text-decoration: underline;
+                color: black;
+                cursor: pointer;
+            }
+
+.icon {
+    float: right;
+    margin-top: 40px;
+    margin-right: 100px;
+}
+
+i {
+    color: white;
+    font-size: 20px;
+    margin-right: 13px;
+}
+
+hr {
+    margin-top: 30px;
+    border: 1px solid grey;
+}
+
+.coffee-info {
+    float: right;
+    margin-top: 100px;
+    margin-right: 120px;
+}
+
+h1 {
+    color: white;
+    font-family: Roboto;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.info {
+    margin-bottom: 20px;
+}
+
+p {
+    color: white;
+    font-family: sans-serif;
+}
+
+button {
+    color: white;
+    background-color: rgb(186, 124, 93);
+    padding: 9px 26px;
+    font-family: Roboto;
+    border: none;
+    border-radius: 2px;
+    transition: box shadow 0.15s;
+}
+
+    button:hover {
+        color: black;
+        text-decoration: underline;
+        box-shadow: 10px 10px 10px black;
+    }
+
+
